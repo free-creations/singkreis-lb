@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fields name="skprofile">
+    <fieldset name="skprofile"
+              label="PLG_USER_SKPROFILE_SLIDER_LABEL"
+    >
+      
+      <field
+        name="voice"
+        type="list"
+        id="voice"
+        description="PLG_USER_SKPROFILE_FIELD_VOICE_DESC"
+        message="PLG_USER_SKPROFILE_FIELD_VOICE_DESC"
+        label="PLG_USER_SKPROFILE_FIELD_VOICE_LABEL"
+      >          
+        <option value="" >PLG_USER_SKPROFILE_OPTION_VOICE_SELECT</option>
+        <option value="0">PLG_USER_SKPROFILE_OPTION_VOICE_0</option>
+        <option value="1">PLG_USER_SKPROFILE_OPTION_VOICE_1</option>
+        <option value="2">PLG_USER_SKPROFILE_OPTION_VOICE_2</option>
+        <option value="3">PLG_USER_SKPROFILE_OPTION_VOICE_3</option>
+        <option value="4">PLG_USER_SKPROFILE_OPTION_VOICE_4</option>
+      </field>
+            
+      <field
+        name="address"
+        type="textarea"
+        id="address"
+        hint="Im Lerchenhain 17 / 71234 Chorstadt"
+        description="PLG_USER_SKPROFILE_FIELD_ADDRESS1_DESC"
+        message="PLG_USER_SKPROFILE_FIELD_ADDRESS1_DESC"
+        filter="string"
+        label="PLG_USER_SKPROFILE_FIELD_ADDRESS1_LABEL"
+        cols="30"
+        rows="2"
+      />
+
+
+      <field
+        name="phone"
+        type="tel"
+        id="phone"
+        hint="07123 987654"
+        description="PLG_USER_SKPROFILE_FIELD_PHONE_DESC"
+        message="PLG_USER_SKPROFILE_FIELD_PHONE_DESC"
+        filter="string"
+        label="PLG_USER_SKPROFILE_FIELD_PHONE_LABEL"
+        size="30"
+      />
+            
+      <field
+        name="mobile"
+        type="tel"
+        id="mobile"
+        description="PLG_USER_SKPROFILE_FIELD_MOBILE_DESC"
+        message="PLG_USER_SKPROFILE_FIELD_MOBILE_DESC"
+        hint="0175 999999"
+        filter="string"
+        label="PLG_USER_SKPROFILE_FIELD_MOBILE_LABEL"
+        size="30"
+      />
+      
+      <field
+        name="function"
+        type="list"
+        id="function"
+        description="Ihr Amt innerhalb des Chores"
+        message="Ihr Amt innerhalb des Chores"
+        label="Funktion:"
+
+      >          
+        <option value="keine">keine</option>
+        <option value="Chorleiter">Chorleiter</option>
+        <option value="Vorstand">Vorstand</option>
+        <option value="Stimmen-Sprecher">Stimmen-Sprecher</option>
+        <option value="Schriftführer">Schriftführer</option>
+        <option value="Kassenwart">Kassenwart</option>        
+      </field>
+
+      <field name="dob_spacer" type="spacer"
+             class="text"
+             label="PLG_USER_SKPROFILE_SPACER_DOB"
+      />
+      <field
+        name="dob"
+        type="calendar"
+        label="PLG_USER_SKPROFILE_FIELD_DOB_LABEL"
+        description="PLG_USER_SKPROFILE_FIELD_DOB_DESC"
+        hint="1980-12-01"
+        format="%Y-%m-%d"
+        filter="server_utc"
+      />
+    </fieldset>
+  </fields>
+</form>
