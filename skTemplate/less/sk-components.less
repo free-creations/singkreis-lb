@@ -1,0 +1,302 @@
+/*
+Copyright 2014 Harald Postner<harald at free-creations.de>.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+/* 
+    Created on : Oct 4, 2014, 6:57:19 PM
+    Author     : Harald Postner<harald at free-creations.de>
+
+  Some additional styles for the Singkreis Template.
+  This file is imported through the file "template.less"
+*/
+
+body{
+  padding-top: @navbar-height;
+  background-image:  url("../images/micro_carbon50_light.png");
+}
+
+.t3-mainbody{
+  padding-top: 0px;
+  margin-top:-4px;
+  padding-bottom: 20px;
+}
+
+.sk-login-popover {
+
+  display: none;
+  position: absolute;
+
+  top: 46px;
+  right: 24px;
+  width:260px;
+
+  max-width: 65%;
+  z-index: 16777271; // max z-index on safari browsers
+
+
+  padding: 30px 20px;
+  text-align: left; // Reset given new insertion method
+
+  background-color: @popover-bg;
+
+  background-clip: padding-box;
+  border: 1px solid @popover-fallback-border-color;
+  border: 1px solid @popover-border-color;
+  border-radius: @border-radius-large;
+  .box-shadow(0 5px 10px rgba(0,0,0,.7));
+
+  @media screen and (min-height: 598px){
+    position: fixed;
+  }
+
+}
+
+// used to overrite the padding on the container element
+// thus articles can position themselves by using a margin of "@sk-small-gutter"
+.no-padding{
+  padding:0px !important;
+}
+
+.padding-responsive {
+  padding-left:  3 * @padding-xs-horizontal;
+  padding-right: 3 * @padding-xs-horizontal;
+  padding-top:  4 * @padding-xs-vertical;
+  padding-bottom:  4 * @padding-xs-vertical;
+  @media (min-height: 470px){ 
+    padding-top:  8 * @padding-xs-vertical;
+  }
+  @media (min-width: @screen-sm-min){ 
+    padding-left:  3 * @padding-base-horizontal;
+    padding-right: 3 * @padding-base-horizontal;
+    padding-top:  ceil(2.8 * @padding-base-vertical);
+    padding-bottom:  2 * @padding-base-vertical;
+  }
+}
+
+.padding-responsive-horizontal {
+  padding-left:  3 * @padding-xs-horizontal;
+  padding-right: 3 * @padding-xs-horizontal;
+
+
+  @media (min-width: @screen-sm-min){ 
+    padding-left:  3 * @padding-base-horizontal;
+    padding-right: 3 * @padding-base-horizontal;
+  }
+}
+
+.sk-article() {
+  background-color: @sk-article-background-color;
+  margin: @sk-small-gutter;
+  .padding-responsive;
+  border: 1px solid @sk-article-border-color;
+  border-radius: @border-radius-large;
+  .box-shadow(4px 4px 12px rgba(0,0,0,.8));
+}
+
+.item article, .items-leading article, .item-page article, .edit.item-page{
+  .sk-article();
+
+  h1, .h1,  h2, .h2, h3,.h3 {
+    margin-bottom: 2px;
+    a {
+      color: lighten(@text-color, 16%);
+    }
+  }
+}
+.item-page article{
+    h1, .h1 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    }
+}
+
+.t3-content {
+  .registration, #user-registration, .login-wrap, .logout, .profile-edit, .sk-contact  {
+    .sk-article();
+  }
+}
+
+@sk-spotlight-background-color: @gray-dark;
+
+.sk-spotlight{
+  .sk-article();
+  background-color:@sk-spotlight-background-color;
+  color: white;
+
+
+  background-image: url('../images/small_header.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100% auto;
+
+  h1, .h1 {
+    text-shadow: 3px 3px 3px fade(black, 100%);
+    font-size: @font-size-h1 ;
+  }
+
+  p  {
+    background-color: fade(@sk-spotlight-background-color, 60%);
+    text-shadow: 1px 1px 2px fade(@sk-spotlight-background-color, 50%);
+
+    padding: 6px 12px;
+    padding-bottom: 12px;
+    font-size: @font-size-base;
+    border-radius: @border-radius-base;
+    .box-shadow(inset 2px 2px 8px fade(white, 25%));
+    border-top: 1px solid fade(white,30%);
+    border-left: 1px solid fade(white,30%);
+    border-bottom: 1px solid fade(black,80%);
+    border-right: 1px solid fade(black,10%);
+  }
+
+  @media screen and (min-width: 400px) {
+    h1, .h1 {
+      font-size: (@font-size-h1 * 1.5);
+    }
+  }
+
+  @media screen and (min-width: @screen-sm-min) {
+    background-image: url('../images/header.jpg');
+    padding-top:    (@jumbotron-padding * 1.6);
+    padding-bottom: (@jumbotron-padding * 1.6);
+
+    .container & {
+      padding-left:  (@jumbotron-padding * 2);
+      padding-right: (@jumbotron-padding * 2);
+    }
+
+    h1, .h1 {
+      font-size: (@font-size-base * 5.5);
+      padding-bottom: (@jumbotron-padding);
+      text-shadow: 4px 4px 2px black,
+        -2px -2px 4px @gray-light,
+        0px 0px 20px black;
+    }
+    p  {
+      font-size: round(@font-size-base*1.2);
+    }
+  }
+
+}
+
+
+
+.item {
+  margin:0px;
+  padding:0px;
+
+}
+
+.items-row {
+  padding:0px;
+  margin:0px;
+}
+
+.items-row .item {
+  margin-bottom: 0;
+}
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  padding:0px;
+}
+
+.items-leading .leading {
+  margin-bottom: 0px;
+}
+
+.t3-navhelper {
+  background: transparent;
+  border-top: none;
+  color: @breadcrumb-color;
+  a {
+    color: @breadcrumb-color;;
+  }
+
+}
+
+@focus-color : hsv(hue(@brand-primary), 30%, 50%);
+@focus-shadow-color : hsla(hue(@focus-color), saturation(@focus-color),lightness(@focus-color), 60%);
+
+select:focus, textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .inputbox:focus
+{
+  border-color: @focus-color;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px @focus-shadow-color;
+}
+
+.navbar-fixed-top {
+  .box-shadow(0px 1px 12px rgba(0,0,0,.6));
+}
+
+.readmore {
+  .btn {
+    max-width: 100% !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.navbar-inverse{
+
+  a {    
+    .caret{
+      border-top-color: @navbar-inverse-link-color;
+      border-bottom-color: @navbar-inverse-link-color;
+    }
+  }
+
+  a:hover {    
+    .caret{
+      border-top-color: white;
+      border-bottom-color: white;
+    }
+  }
+
+}
+
+.sk-contact-mapWrapper {
+  // a wrapper to keep i-framed google maps responsive
+  // see: http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
+  position: relative;
+
+  margin-top: 4px;
+  margin-bottom: 4px;
+  width: 634px;
+  max-width: 100%;
+  padding-bottom:75%; 
+  padding-top: 25px;
+  height: 0;
+  .box-shadow(0 5px 10px rgba(0,0,0,.5));
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+.breadcrumb {
+  display: inline-block;
+}
+
+.sk-user-greeting {
+  .pull-right();
+   padding-top:  @breadcrumb-padding-vertical ;
+}
+
+.t3-navhelper {
+  padding-bottom: 4px;
+}

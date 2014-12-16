@@ -1,0 +1,117 @@
+.sk-nav {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.sk-nav > li {
+  position: relative;
+  display: block;
+}
+.sk-nav > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+.sk-nav > li > a:hover,
+.sk-nav > li > a:focus {
+  text-decoration: none;
+  background-color: #eeeeee;
+}
+.sk-nav > li.disabled > a {
+  color: #777777;
+}
+.sk-nav > li.disabled > a:hover,
+.sk-nav > li.disabled > a:focus {
+  color: #777777;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: not-allowed;
+}
+.sk-nav .open > a,
+.sk-nav .open > a:hover,
+.sk-nav .open > a:focus {
+  background-color: #eeeeee;
+  border-color: #cc0000;
+}
+.sk-nav .nav-divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+.sk-nav > li > a > img {
+  max-width: none;
+}
+.sk-nav-tabs {
+  border-bottom: 1px solid #dddddd;
+  
+}
+.sk-nav-tabs > li {
+  float: left;
+  margin-bottom: -1px;
+}
+.sk-nav-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+}
+.sk-nav-tabs > li > a:hover {
+  border-color: #eeeeee #eeeeee #dddddd;
+}
+.sk-nav-tabs > li.active > a,
+.sk-nav-tabs > li.active > a:hover,
+.sk-nav-tabs > li.active > a:focus {
+  color: #555555;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+
+.sk-nav-justified {
+  width: 100%;
+}
+.sk-nav-justified > li {
+  float: none;
+}
+.sk-nav-justified > li > a {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.sk-nav-justified > .dropdown .dropdown-menu {
+  top: auto;
+  left: auto;
+}
+@media (min-width: 768px) {
+  .sk-nav-justified > li {
+    display: table-cell;
+    width: 1%;
+  }
+  .sk-nav-justified > li > a {
+    margin-bottom: 0;
+  }
+}
+.sk-nav-tabs-justified {
+  border-bottom: 0;
+}
+.sk-nav-tabs-justified > li > a {
+  margin-right: 0;
+  border-radius: 4px;
+}
+.sk-nav-tabs-justified > .active > a,
+.sk-nav-tabs-justified > .active > a:hover,
+.sk-nav-tabs-justified > .active > a:focus {
+  border: 1px solid #dddddd;
+}
+@media (min-width: 768px) {
+  .sk-nav-tabs-justified > li > a {
+    border-bottom: 1px solid #dddddd;
+    border-radius: 4px 4px 0 0;
+  }
+  .sk-nav-tabs-justified > .active > a,
+  .sk-nav-tabs-justified > .active > a:hover,
+  .sk-nav-tabs-justified > .active > a:focus {
+    border-bottom-color: #ffffff;
+  }
+}
