@@ -28,7 +28,7 @@ class modSkUserGreetingHelper {
     if ($user->guest) {
       return null;
     } else {
-      return 'Hallo, ' . $user->name;
+      return 'Grüß Gott, ' . $user->name;
     }
   }
 
