@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.1" type="plugin" group="user">
+<extension version="3.1" type="plugin" group="user" method="upgrade">
   <name>plg_user_skprofile</name>
+  <version>0.0.1</version>
   <author>Harald Postner</author>
   <creationDate>November 2014</creationDate>
   <copyright>(C) 2014 Harald Postner. All rights reserved.</copyright>
   <license> Apache License, Version 2.0 ; see LICENSE.txt</license>
   <authorEmail>harald@free-creations.de</authorEmail>
   <authorUrl>www.free-creations.de</authorUrl>
-  <version>3.0.1</version>
+  <version>3.0.2</version>
   <description>PLG_USER_SKPROFILE_XML_DESCRIPTION</description>
 
   <files>
     <filename plugin="skprofile">skprofile.php</filename>
     <filename>index.html</filename>
     <folder>profiles</folder>
+    <folder>fields</folder>
+    <folder>language</folder>
   </files>
-  <languages>
-    <language tag="en-GB">en-GB.plg_user_skprofile.ini</language>
-    <language tag="en-GB">en-GB.plg_user_skprofile.sys.ini</language>
-  </languages>
+
   <config>
     <fields name="params">
 
